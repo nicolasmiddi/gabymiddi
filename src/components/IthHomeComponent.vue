@@ -38,7 +38,7 @@ export default {
 <style scoped>
 .home {
   background-color: #535756;
-  height: 100vh;
+  min-height: 100vh;
 }
 .btn-cta {
   color: #47d7c2;
