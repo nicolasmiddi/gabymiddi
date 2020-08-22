@@ -8,29 +8,28 @@
       <v-row class="">
         <v-col cols="12" md="6" class="">
           <v-card elevation="0">
-            <v-list flat>
+            <div>
               <v-subheader>Encontrame en </v-subheader>
-              <v-list-item-group>
-                <v-list-item v-for="(item, i) in rrss" :key="i">
-                  <v-list-item-icon>
-                    <v-icon :color="item.color" v-text="item.icon"></v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <a
-                      rel="noreferrer"
-                      target="_blank"
-                      style="text-decoration: none;"
-                      :href="item.href"
-                    >
-                      <v-list-item-title
-                        :class="item.textcolor"
-                        v-text="item.text"
-                      ></v-list-item-title>
-                    </a>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list-item-group>
-            </v-list>
+              <div
+                class="d-flex justify-start mt-8"
+                v-for="(item, i) in rrss"
+                :key="i"
+              >
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  style="text-decoration: none;"
+                  :href="item.href"
+                >
+                  <v-icon :color="item.color" v-text="item.icon"></v-icon>
+                  <span
+                    class="pl-4"
+                    :class="item.textcolor"
+                    v-text="item.text"
+                  ></span>
+                </a>
+              </div>
+            </div>
           </v-card>
         </v-col>
         <v-col cols="12" md="6" class="">
