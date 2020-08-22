@@ -8,6 +8,8 @@
         bottom
         right
         fixed
+        rel="noreferrer"
+        title="whatsapp"
         class="success"
         :href="`https://wa.me/${phone}`"
         target="_blank"
