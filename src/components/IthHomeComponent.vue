@@ -13,11 +13,11 @@
         >
           <div class="d-flex flex-column">
             <h1 class="bio d-inline-block">¡Hola! Soy Gaby Middi</h1>
-            <h3
-              class="bio mt-1 mb-5 d-inline-block font-weight-light"
+            <p
+              class="bio mt-1 mb-5 d-inline-block font-weight-light subtitle-1"
               v-html="info_general.bio"
-            ></h3>
-            <v-btn to="#portfolio" outlined color="#47d7c2" class="mt-7 btn-cta"
+            ></p>
+            <v-btn title="ver portfolio" rel="nofollow" to="#portfolio" outlined color="#47d7c2" class="mt-7 btn-cta"
               >Ver mi portfolio
             </v-btn>
           </div>

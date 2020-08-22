@@ -21,7 +21,7 @@ export default {
     IthPortfolioComponent,
     IthContactoComponent
   },
-  created() {
+  mounted() {
     this.$http.get("storage/data/data.json").then(res => {
       this.$store.commit("editInfoGeneral", res.data.info_general);
       this.$store.commit("editRrss", res.data.rrss);

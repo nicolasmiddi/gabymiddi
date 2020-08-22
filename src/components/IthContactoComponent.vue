@@ -17,6 +17,7 @@
                   </v-list-item-icon>
                   <v-list-item-content>
                     <a
+                      rel="noreferrer"
                       target="_blank"
                       style="text-decoration: none;"
                       :href="item.href"
@@ -43,15 +44,15 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import IthFormularioComponent from '@/components/IthFormularioComponent.vue'
+import { mapState } from "vuex";
+import IthFormularioComponent from "@/components/IthFormularioComponent.vue";
 
 export default {
   components: {
-    IthFormularioComponent,
+    IthFormularioComponent
   },
-  computed: mapState(['rrss']),
-}
+  computed: mapState(["rrss"])
+};
 </script>
 
 <style scoped>

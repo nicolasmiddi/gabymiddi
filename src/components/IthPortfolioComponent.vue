@@ -8,9 +8,13 @@
       <v-row class="">
         <template v-for="n in portfolios">
           <v-col :key="n.id" cols="6" md="4" class="white--text">
-            <router-link style="text-decoration: none;" :to="`/portfolio/${n.id}`">
+            <router-link
+              :title="n.title"
+              style="text-decoration: none;"
+              :to="`/portfolio/${n.id}`"
+            >
               <v-card>
-                <v-img height="250" :src="n.thumbnail"></v-img>
+                <v-img class="thumbnail" :src="n.thumbnail"></v-img>
                 <v-card-text class="text-center font-weight-light">
                   {{ n.title }}
                 </v-card-text>
@@ -24,11 +28,11 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 
 export default {
-  computed: mapState(['portfolios']),
-}
+  computed: mapState(["portfolios"])
+};
 </script>
 
 <style scoped>
@@ -44,5 +48,17 @@ export default {
 .titulo {
   font-size: 2em;
   padding-bottom: 10%;
+}
+.thumbnail {
+  height: 250px;
+}
+
+@media (max-width: 800px) {
+  .thumbnail {
+    height: 170px;
+  }
+  .v-card__text {
+    padding: 0.5em;
+  }
 }
 </style>

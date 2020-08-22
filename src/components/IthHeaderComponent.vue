@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar app clipped-left class="elevation-0" color="#535756">
+    <v-app-bar fixed flat dense color="#535756">
       <router-link style="text-decoration: none;" to="/">
         <span class="title ml-3 mr-5 white--text"
           >Gabriela Middi &nbsp;<span class="font-weight-light"
@@ -23,8 +23,6 @@
         </router-link>
         <!-- </a> -->
       </template>
-
-      
 
       <v-app-bar-nav-icon
         class="d-lg-none d-xl-flex"
@@ -72,4 +70,5 @@ export default {
 #keep .v-navigation-drawer__border {
   display: none;
 }
+
 </style>
