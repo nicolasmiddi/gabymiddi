@@ -22,10 +22,10 @@ export default {
     IthContactoComponent
   },
   mounted() {
-    this.$http.get(`https://ipapi.co/json/`).then(res => {
-      console.log(res.data.ip);
-      alert(res.data.ip);
-    });
+    // this.$http.get(`https://ipapi.co/json/`).then(res => {
+    //   console.log(res.data.ip);
+    //   alert(res.data.ip);
+    // });
 
     this.$http.get("storage/data/data.json").then(res => {
       this.$store.commit("editInfoGeneral", res.data.info_general);
