@@ -24,7 +24,7 @@ export default {
   mounted() {
 
     this.$http.get(`http://www.geoplugin.net/json.gp`).then(res => {
-      console.log(res.data.geoplugin_request)
+      alert(res.data.geoplugin_request)
     });
 
     this.$http.get("storage/data/data.json").then(res => {
