@@ -22,9 +22,9 @@ export default {
     IthContactoComponent
   },
   mounted() {
-
-    this.$http.get(`http://www.geoplugin.net/json.gp`).then(res => {
-      alert(res.data.geoplugin_request)
+    this.$http.get(`https://ipapi.co/json/`).then(res => {
+      console.log(res.data.ip);
+      alert(res.data.ip);
     });
 
     this.$http.get("storage/data/data.json").then(res => {
