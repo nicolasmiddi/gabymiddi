@@ -46,4 +46,16 @@ export default {
 .icono--servicio {
   font-size: 100px;
 }
+
+@media (min-width: 1440px) {
+  .servicio {
+    min-height: 50vh;
+  }
+}
+
+@media (min-width: 1264px) and (max-width: 1400px) {
+  .servicio {
+    min-height: 50vh;
+  }
+}
 </style>

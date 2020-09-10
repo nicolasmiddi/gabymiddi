@@ -1,4 +1,5 @@
 import Vue from "vue";
+import firebase from "firebase";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -9,42 +10,20 @@ Vue.prototype.$http = axios;
 
 Vue.config.productionTip = false;
 
-Vue.component(
-  "IthPortfolioDetalleComponent",
-  require("@/components/IthPortfolioDetalleComponent.vue").default
-);
-Vue.component(
-  "IthFormularioComponent",
-  require("@/components/IthFormularioComponent.vue").default
-);
-Vue.component(
-  "IthHeaderComponent",
-  require("@/components/IthHeaderComponent.vue").default
-);
-Vue.component(
-  "IthWhatsappComponent",
-  require("@/components/IthWhatsappComponent.vue").default
-);
-Vue.component(
-  "IthFooterComponent",
-  require("@/components/IthFooterComponent.vue").default
-);
-Vue.component(
-  "IthHomeComponent",
-  require("@/components/IthHomeComponent.vue").default
-);
-Vue.component(
-  "IthServiciosComponent",
-  require("@/components/IthServiciosComponent.vue").default
-);
-Vue.component(
-  "IthPortfolioComponent",
-  require("@/components/IthPortfolioComponent.vue").default
-);
-Vue.component(
-  "IthContactoComponent",
-  require("@/components/IthContactoComponent.vue").default
-);
+const firebaseConfig = {
+  apiKey: "AIzaSyBb87EJSO5livrO4v0qIWh0R3men-CCSFo",
+  authDomain: "project-firebase-41b45.firebaseapp.com",
+  databaseURL: "https://project-firebase-41b45.firebaseio.com",
+  projectId: "project-firebase-41b45",
+  storageBucket: "project-firebase-41b45.appspot.com",
+  messagingSenderId: "467537846029",
+  appId: "1:467537846029:web:cfc52a61a695e576d9da44",
+  measurementId: "G-K3PYCJCB8C"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
 
 new Vue({
   router,
