@@ -8,7 +8,7 @@ export default new Vuex.Store({
   state: {
     info_general: [],
     rrss: [],
-    portfolios: [],
+    portfolios: null,
     servicios: [],
     phone: []
   },

@@ -2,7 +2,7 @@
   <div class="servicio">
     <v-container fluid>
       <div class="text-center titulo">
-        <h2 v-if="portfolios[id]" class="white--text font-weight-light">
+        <h2 v-if="portfolios" class="white--text font-weight-light">
           {{ portfolios[id].title }}
         </h2>
         <h2 v-else class="white--text font-weight-light">
@@ -14,7 +14,7 @@
           ><v-icon>mdi-arrow-left-bold</v-icon> VOLVER</v-btn
         >
       </div>
-      <div v-if="portfolios[id]" class="container-grid">
+      <div v-if="portfolios" class="container-grid">
         <template v-for="n in portfolios[id].coleccion">
           <v-img
             :key="n.img"
@@ -44,7 +44,7 @@ export default {
   computed: mapState(["portfolios"]),
   mounted() {
     this.id = this.$route.params.id;
-    this.$store.dispatch("FETCH_PORTFOLIO");
+    if (this.portfolios === null) this.$store.dispatch("FETCH_PORTFOLIO");
   }
 };
 </script>

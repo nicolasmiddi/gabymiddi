@@ -12,8 +12,10 @@ import IthHomeComponent from "@/components/IthHomeComponent.vue";
 import IthServiciosComponent from "@/components/IthServiciosComponent.vue";
 import IthPortfolioComponent from "@/components/IthPortfolioComponent.vue";
 import IthContactoComponent from "@/components/IthContactoComponent.vue";
+import { mapState } from "vuex";
 
 export default {
+  computed: mapState(["portfolios"]),
   components: {
     IthHomeComponent,
     IthServiciosComponent,
@@ -21,7 +23,7 @@ export default {
     IthContactoComponent
   },
   mounted() {
-    this.$store.dispatch("FETCH_PORTFOLIO");
+    if (this.portfolios === null) this.$store.dispatch("FETCH_PORTFOLIO");
   }
 };
 </script>
